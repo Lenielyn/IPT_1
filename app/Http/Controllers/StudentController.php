@@ -15,24 +15,7 @@ use App\Http\Controllers\exam_typeController;
 use App\Http\Controllers\exam_resultsController;
 use App\Http\Controllers\classroom_exam_resultsController;
 
-// Define API resource routes
-
-
-Route::get('/', function () {
-    return "hello from api";
-});
-
-//example 
-
-Route::apiResource('users', UserController::class);
-Route::apiResource('user', UserController::class);
-Route::get('/user', [UserController::class, 'view']);
-Route::post('/user', [UserController::class, 'add']);
-Route::put('/user', [UserController::class, 'update']);
-Route::delete('/user', [UserController::class, 'delete']);
-
-//activity 2
-
+//examples
 Route::apiResource('students', studentsController::class);
 Route::apiResource('parents', parentsController::class);
 Route::apiResource('teachers', teachersController::class);
@@ -44,5 +27,3 @@ Route::apiResource('attendances', attendanceController::class);
 Route::apiResource('exam-types', exam_typeController::class);
 Route::apiResource('exams',classroom_exam_resultsController::class);
 Route::apiResource('exam-results', exam_resultsController::class);
-
-
